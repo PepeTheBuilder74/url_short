@@ -10,7 +10,12 @@ import { fileURLToPath } from 'url';
 
 const app = express();
 
-app.use(cors());
+// Configurable CORS: set CORS_ORIGINS="https://app.example.com,https://admin.example.com" in production
+const allowedOrigins = (process.env.CORS_ORIGINS || '')
+  .split(',')
+  .map(o => o.trim())
+  .filter(Boolean);
+app.use(cors(allowedOrigins.length ? { origin: allowedOrigins } : undefined));
 app.use(express.json());
 
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
