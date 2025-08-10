@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import api from '../api.js';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function RegisterPage() {
@@ -13,7 +13,7 @@ export default function RegisterPage() {
     setError(null);
     setSuccess(false);
     try {
-      await axios.post('/api/auth/register', form);
+  await api.post('/api/auth/register', form);
       setSuccess(true);
       setTimeout(() => navigate('/login'), 800);
     } catch (err) {

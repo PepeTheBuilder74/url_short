@@ -1,18 +1,93 @@
-body { font-family: system-ui, Arial, sans-serif; margin:0; background:#f5f7fa; }
-.app-shell header { display:flex; justify-content:space-between; align-items:center; background:#1e293b; color:#fff; padding:0.75rem 1.25rem; }
-nav a { color:#fff; margin-right:1rem; text-decoration:none; }
-nav button { background:#ef4444; color:#fff; border:none; padding:0.4rem 0.8rem; cursor:pointer; }
-main { padding:1rem 1.25rem; }
-.card { background:#fff; max-width:340px; margin:2rem auto; padding:1rem 1.25rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
-.card form { display:flex; flex-direction:column; gap:0.6rem; }
-.card input { padding:0.55rem 0.65rem; }
-.card button { padding:0.55rem; cursor:pointer; background:#2563eb; color:#fff; border:none; }
-.error { color:#dc2626; }
-.success { color:#16a34a; }
-.create-form { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem; }
-.create-form input { padding:0.45rem 0.55rem; }
-.create-form button { padding:0.45rem 0.9rem; background:#2563eb; color:#fff; border:none; cursor:pointer; }
-.links-table { width:100%; border-collapse:collapse; background:#fff; }
-.links-table th, .links-table td { padding:0.5rem 0.6rem; border-bottom:1px solid #e2e8f0; text-align:left; }
-.links-table tr:hover { background:#f1f5f9; }
-.original-url { max-width:320px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+}
+.app-shell header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+}
+nav a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+nav button {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+main {
+  padding: 1rem 1.25rem;
+}
+.card {
+  background: #fff;
+  max-width: 340px;
+  margin: 2rem auto;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.card input {
+  padding: 0.55rem 0.65rem;
+}
+.card button {
+  padding: 0.55rem;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+.error {
+  color: #dc2626;
+}
+.success {
+  color: #16a34a;
+}
+.create-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.create-form input {
+  padding: 0.45rem 0.55rem;
+}
+.create-form button {
+  padding: 0.45rem 0.9rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.links-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.links-table th,
+.links-table td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+.links-table tr:hover {
+  background: #f1f5f9;
+}
+.original-url {
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

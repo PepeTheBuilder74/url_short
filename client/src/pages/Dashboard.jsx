@@ -1,13 +1,13 @@
 import React from 'react';
-import axios from 'axios';
 import { AuthContext } from '../main.jsx';
+import { authApi } from '../api.js';
 
 export default function Dashboard() {
   const { token } = React.useContext(AuthContext);
   const [links, setLinks] = React.useState([]);
   const [form, setForm] = React.useState({ originalUrl: '', customCode: '' });
   const [error, setError] = React.useState(null);
-  const api = axios.create({ headers: { Authorization: `Bearer ${token}` } });
+  const api = React.useMemo(() => authApi(token), [token]);
 
   const load = async () => {
     try {

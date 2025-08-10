@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import api from '../api.js';
 import { AuthContext } from '../main.jsx';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError(null);
     try {
-      const res = await axios.post('/api/auth/login', form);
+  const res = await api.post('/api/auth/login', form);
       login(res.data.token);
       navigate('/');
     } catch (err) {
